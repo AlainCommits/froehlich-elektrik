@@ -2,7 +2,7 @@
 import AboutSection from "@/components/modules/AboutSection"
 import ContactSection from "@/components/modules/ContactSection"
 import WhyUsSection from "@/components/modules/WhyUsSection"
-import ReferenceSection from "@/components/modules/ReferenceSection"
+// import ReferenceSection from "@/components/modules/ReferenceSection"
 import InstallationSection from "@/components/modules/EmergencySection"
 import Hero from "@/components/modules/Hero"
 import ServicesSection from "@/components/modules/ServiceSection"
@@ -22,7 +22,7 @@ export default function HomePage() {
       <ServicesSection />
       <ContactSection />
       <WhyUsSection />
-      <ReferenceSection />
+      {/* <ReferenceSection /> */}
       <InstallationSection />
       <FAQ />
     </main>

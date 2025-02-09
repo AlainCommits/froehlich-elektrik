@@ -1,9 +1,72 @@
-// components/modules/ServiceSection.tsx
+//Users/alonondanse/froehlich-elektrik/components/modules/ServiceSection.tsx
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Wrench, Droplet, Search, Clock, Shield, Ban } from 'lucide-react'
+import { Zap, Power, Shield, Home, Settings, Plug } from 'lucide-react'
 
 export default function ServicesSection() {
+  const services = [
+    {
+      icon: Zap,
+      title: "Elektro-Notdienst",
+      description: "24/7 Elektro-Notdienst von Fröhlich Elektrik",
+      features: [
+        "Sofortige Hilfe bei Stromausfall",
+        "Kurzschluss-Reparatur",
+        "Sicherungskasten-Service",
+      ]
+    },
+    {
+      icon: Power,
+      title: "Elektroinstallationen",
+      description: "Professionelle Elektroinstallationen durch Fröhlich Elektrik",
+      features: [
+        "Neue Stromkreise verlegen",
+        "Steckdosen & Schalter",
+        "Komplette Hauselektrik",
+      ]
+    },
+    {
+      icon: Shield,
+      title: "Sicherheitstechnik",
+      description: "Elektrische Sicherheitssysteme von Fröhlich Elektrik",
+      features: [
+        "FI-Schutzschalter",
+        "Überspannungsschutz",
+        "Brandschutz-Elektrik",
+      ]
+    },
+    {
+      icon: Home,
+      title: "Smart Home",
+      description: "Intelligente Haussteuerung durch Fröhlich Elektrik",
+      features: [
+        "Smart Home Installation",
+        "Beleuchtungssteuerung",
+        "Automatisierung",
+      ]
+    },
+    {
+      icon: Settings,  // Ersetzt Tool mit Settings
+      title: "Wartung & Prüfung",
+      description: "Elektrische Wartungsarbeiten von Fröhlich Elektrik",
+      features: [
+        "E-Check durchführen",
+        "Anlagenprüfung",
+        "Wartungsverträge",
+      ]
+    },
+    {
+      icon: Plug,  // Zusätzliches passendes Icon für Reparaturen
+      title: "Reparaturservice",
+      description: "Schnelle Elektro-Reparaturen durch Fröhlich Elektrik",
+      features: [
+        "Störungsbehebung",
+        "Gerätereparatur",
+        "Elektrosanierung",
+      ]
+    }
+  ]
+
   return (
     <section className="py-16 bg-muted-foreground w-full" id="services">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -12,11 +75,11 @@ export default function ServicesSection() {
             Unsere Leistungen
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            Professionelle Rohrreinigung
+            Fröhlich Elektrik Services
           </h2>
           <p className="text-background text-lg max-w-2xl mx-auto">
-            Von der einfachen Verstopfung bis zur komplexen Kanalsanierung - 
-            wir bieten Ihnen umfassende Lösungen für alle Rohrprobleme.
+            Von der Notfallhilfe bis zur Smart-Home-Installation - 
+            Fröhlich Elektrik bietet Ihnen umfassende Lösungen für alle elektrischen Anforderungen.
           </p>
         </div>
 
@@ -47,66 +110,3 @@ export default function ServicesSection() {
     </section>
   )
 }
-
-const services = [
-  {
-    icon: Wrench,
-    title: "Rohrreinigung & Verstopfungen",
-    description: "Schnelle Hilfe bei verstopften Abflüssen und Rohren",
-    features: [
-      "Sofortige Verfügbarkeit",
-      "Modernste Werkzeuge",
-      "Nachhaltige Lösung",
-    ]
-  },
-  {
-    icon: Search,
-    title: "Kamerainspektion",
-    description: "Professionelle Rohruntersuchung mit modernster Kameratechnik",
-    features: [
-      "Digitale Aufzeichnung",
-      "Schadensanalyse",
-      "Präzise Ortung",
-    ]
-  },
-  {
-    icon: Clock,
-    title: "24/7 Notdienst",
-    description: "Rund um die Uhr für Notfälle verfügbar",
-    features: [
-      "Schnelle Reaktionszeit",
-      "Faire Festpreise",
-      "Sofort-Hilfe",
-    ]
-  },
-  {
-    icon: Shield,
-    title: "Rohrsanierung",
-    description: "Nachhaltige Reparatur und Sanierung von Rohrleitungen",
-    features: [
-      "Ohne Aufgrabung",
-      "Langlebige Lösung",
-      "Kosteneffizient",
-    ]
-  },
-  {
-    icon: Droplet,
-    title: "Kanalreinigung",
-    description: "Professionelle Reinigung von Abwasserkanälen",
-    features: [
-      "Hochdruck-Spülung",
-      "Verstopfungsbeseitigung",
-      "Wartungsservice",
-    ]
-  },
-  {
-    icon: Ban,
-    title: "Verstopfungsprävention",
-    description: "Vorbeugende Maßnahmen gegen Rohrverstopfungen",
-    features: [
-      "Regelmäßige Wartung",
-      "Beratungsservice",
-      "Langfristiger Schutz",
-    ]
-  }
-]

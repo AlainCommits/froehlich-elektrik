@@ -1,27 +1,56 @@
-// components/modules/EmergencySection.tsx
+//Users/alonondanse/froehlich-elektrik/components/modules/EmergencySection.tsx
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Clock, ShieldCheck, Wrench } from 'lucide-react'
 import Link from 'next/link'
 
 export default function EmergencySection() {
+  const emergencyServices = [
+    {
+      icon: Clock,
+      title: "Elektro-Notdienst",
+      description: "Sofortige Hilfe bei elektrischen Notfällen von Fröhlich Elektrik",
+      features: [
+        "Reaktionszeit unter 30 Minuten",
+        "24/7 Verfügbarkeit",
+        "Festpreisgarantie von Fröhlich Elektrik"
+      ]
+    },
+    {
+      icon: Wrench,
+      title: "Elektroinstallationen",
+      description: "Professionelle Elektroarbeiten vom Fröhlich Elektrik Team",
+      features: [
+        "Modernste Elektrotechnik",
+        "Qualifizierte Elektriker",
+        "Dokumentierte Durchführung"
+      ]
+    }
+  ]
+
+  const emergencyStats = [
+    { value: "30 Min", label: "Durchschnittliche Anfahrtszeit" },
+    { value: "24/7", label: "Notdienst Verfügbarkeit" },
+    { value: "100%", label: "Zufriedenheitsgarantie" },
+    { value: "0€", label: "Anfahrtskosten im Stadtgebiet" }
+  ]
+
   return (
     <section className="py-16 bg-primary/5 w-full">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Linke Seite - Notfall-Info */}
           <div className="space-y-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary">
               <Clock className="w-5 h-5 mr-2" />
-              <span className="font-medium">24/7 Notdienst</span>
+              <span className="font-medium">24/7 Elektro-Notdienst</span>
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold text-primary">
-              Rohrverstopfung? Wir sind sofort für Sie da!
+              Stromausfall? Fröhlich Elektrik ist sofort für Sie da!
             </h2>
             
             <p className="text-lg text-muted-foreground">
-              Keine Panik bei verstopften Rohren! Unser Notfall-Team ist rund um die Uhr 
+              Keine Panik bei elektrischen Problemen! Das Fröhlich Elektrik Team ist rund um die Uhr 
               für Sie im Einsatz - schnell, zuverlässig und zu fairen Festpreisen.
             </p>
 
@@ -41,7 +70,6 @@ export default function EmergencySection() {
             </div>
           </div>
 
-          {/* Rechte Seite - Service-Karten */}
           <div className="grid gap-6">
             {emergencyServices.map((service, index) => (
               <Card key={index} className="border-2 hover:border-primary transition-colors">
@@ -67,7 +95,6 @@ export default function EmergencySection() {
           </div>
         </div>
 
-        {/* Bottom Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {emergencyStats.map((stat, index) => (
             <div key={index} className="text-center space-y-2">
@@ -80,33 +107,3 @@ export default function EmergencySection() {
     </section>
   )
 }
-
-const emergencyServices = [
-  {
-    icon: Clock,
-    title: "Notfall-Rohrreinigung",
-    description: "Sofortige Hilfe bei akuten Verstopfungen",
-    features: [
-      "Reaktionszeit unter 30 Minuten",
-      "24/7 Verfügbarkeit",
-      "Festpreisgarantie"
-    ]
-  },
-  {
-    icon: Wrench,
-    title: "Vorbeugende Wartung",
-    description: "Regelmäßige Inspektion und Reinigung",
-    features: [
-      "Professionelle Kamerainspektion",
-      "Wartungsverträge möglich",
-      "Dokumentierte Durchführung"
-    ]
-  }
-]
-
-const emergencyStats = [
-  { value: "30 Min", label: "Durchschnittliche Anfahrtszeit" },
-  { value: "24/7", label: "Notdienst Verfügbarkeit" },
-  { value: "100%", label: "Zufriedenheitsgarantie" },
-  { value: "0€", label: "Anfahrtskosten im Stadtgebiet" }
-]

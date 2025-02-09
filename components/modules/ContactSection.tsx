@@ -1,22 +1,46 @@
-// components/modules/ContactSection.tsx
+//Users/alonondanse/froehlich-elektrik/components/modules/ContactSection.tsx
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Clock, MapPin, Mail } from 'lucide-react'
 
 export default function ContactSection() {
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: "Elektro-Notdienst Hotline",
+      content: "0157-926-430-00"
+    },
+    {
+      icon: Clock,
+      title: "Servicezeiten",
+      content: "24/7 - Auch an Sonn- und Feiertagen"
+    },
+    {
+      icon: MapPin,
+      title: "Einsatzgebiet",
+      content: "Fröhlich Elektrik in Ihrer Region"
+    }
+  ]
+
+  const trustElements = [
+    { value: "30 Min", label: "Reaktionszeit" },
+    { value: "24/7", label: "Erreichbarkeit" },
+    { value: "100%", label: "Festpreisgarantie" },
+    { value: "4.9★", label: "Kundenbewertung" }
+  ]
+
   return (
     <section className="py-16 bg-background w-full" id="contact">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Kontakt Info */}
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                24/7 Rohrreinigung Notdienst
+                Fröhlich Elektrik - 24/7 Elektro-Notdienst
               </h2>
               <p className="text-muted-foreground text-lg">
-                Verstopfung? Wir sind rund um die Uhr für Sie da und in 30 Minuten vor Ort.
+                Elektrische Probleme? Das Fröhlich Elektrik Team ist rund um die Uhr für Sie da und in 30 Minuten vor Ort.
               </p>
             </div>
 
@@ -44,7 +68,7 @@ export default function ContactSection() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="flex-1">
-                <a href="mailto:info@rohrreinigung.de">
+                <a href="mailto:info@froehlich-elektrik.de">
                   <Mail className="mr-2 h-5 w-5" />
                   E-Mail senden
                 </a>
@@ -52,12 +76,11 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Bild und Vertrauenselemente */}
           <div className="space-y-6">
             <div className="relative aspect-square rounded-lg overflow-hidden">
               <Image
                 src="/images/support.png"
-                alt="Rohrreinigung Kundenservice"
+                alt="Fröhlich Elektrik Kundenservice"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -82,28 +105,3 @@ export default function ContactSection() {
     </section>
   )
 }
-
-const contactInfo = [
-  {
-    icon: Phone,
-    title: "Notdienst Hotline",
-    content: "0157-926-430-00"
-  },
-  {
-    icon: Clock,
-    title: "Servicezeiten",
-    content: "24/7 - Auch an Sonn- und Feiertagen"
-  },
-  {
-    icon: MapPin,
-    title: "Einsatzgebiet",
-    content: "In Ihrer Region - Schnell vor Ort"
-  }
-]
-
-const trustElements = [
-  { value: "30 Min", label: "Reaktionszeit" },
-  { value: "24/7", label: "Erreichbarkeit" },
-  { value: "100%", label: "Festpreisgarantie" },
-  { value: "4.9★", label: "Kundenbewertung" }
-]
