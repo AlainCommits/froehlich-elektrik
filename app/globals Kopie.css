@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 48 16% 95%; /* Hellgrau */
+  --foreground: 0 0% 44%; /* Dunkelgrau für Texte */
+
+  --primary: 54 100% 50%; /* Kräftiges Gelb */
+  --primary-foreground: 0 0% 30%; /* Dunkelgrau für Lesbarkeit */
+
+  --secondary: 0 0% 80%; /* Softes Grau */
+  --secondary-foreground: 0 0% 30%;
+
+  --accent: 48 18% 90%; /* Helles Grau für Akzente */
+  --accent-foreground: 0 0% 30%;
+
+  --muted: 48 15% 85%; /* Sehr helles Grau */
+  --muted-foreground: 0 0% 35%;
+
+  --border: 0 0% 65%; /* Mittelgrau für Rahmen */
+  --input: 0 0% 65%; /* Gleiche Farbe für Eingabefelder */
+
+  --destructive: 0 85% 50%; /* Rotes Warnsignal */
+  --destructive-foreground: 0 0% 100%; /* Weiß für Kontrast */
+
+  --ring: 54 100% 50%; /* Gelb für Hervorhebungen */
+
+  /* Chart Farben für Diagramme */
+  --chart-1: 54 100% 50%; /* Gelb */
+  --chart-2: 0 0% 40%; /* Dunkelgrau */
+  --chart-3: 0 0% 60%; /* Mittelgrau */
+  --chart-4: 0 0% 80%; /* Helles Grau */
+  --chart-5: 48 16% 95%; /* Sehr helles Grau */
+}
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 220 10% 95%;
+
+    --primary: 220 85% 50%;
+    --primary-foreground: 220 10% 98%;
+
+    --secondary: 30 90% 50%;
+    --secondary-foreground: 220 10% 98%;
+
+    --accent: 160 65% 50%;
+    --accent-foreground: 220 10% 98%;
+
+    --muted: 220 10% 25%;
+    --muted-foreground: 220 10% 70%;
+
+    --border: 220 15% 40%;
+    --input: 220 15% 40%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 220 10% 98%;
+
+    --ring: 220 85% 50%;
+
+    /* Zusätzliche Farben für Diagramme und Akzente */
+    --chart-1: 220 85% 50%;
+    --chart-2: 30 90% 50%;
+    --chart-3: 160 65% 50%;
+    --chart-4: 0 85% 60%;
+    --chart-5: 280 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

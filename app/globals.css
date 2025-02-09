@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    
+      --navbar-height: 4rem; /* 64px mobile */
+      
+      @screen md {
+        --navbar-height: 6.5rem; /* 104px desktop */
+      }
+    
+      --gradient: #003973;
+      --background: 48 16% 95%; /* Hellgrau */
+      --foreground: 0 0% 44%; /* Dunkelgrau für Texte */
+    
+      --primary: 54 100% 50%; /* Kräftiges Gelb */
+      --primary-foreground: 0 0% 30%; /* Dunkelgrau für Lesbarkeit */
+    
+      --secondary: 0 0% 80%; /* Softes Grau */
+      --secondary-foreground: 0 0% 30%;
+    
+      --accent: 48 18% 90%; /* Helles Grau für Akzente */
+      --accent-foreground: 0 0% 30%;
+    
+      --muted: 48 15% 85%; /* Sehr helles Grau */
+      --muted-foreground: 0 0% 35%;
+    
+      --border: 0 0% 65%; /* Mittelgrau für Rahmen */
+      --input: 0 0% 65%; /* Gleiche Farbe für Eingabefelder */
+    
+      --destructive: 0 85% 50%; /* Rotes Warnsignal */
+      --destructive-foreground: 0 0% 100%; /* Weiß für Kontrast */
+    
+      --ring: 54 100% 50%; /* Gelb für Hervorhebungen */
+    
+      /* Chart Farben für Diagramme */
+      --chart-1: 54 100% 50%; /* Gelb */
+      --chart-2: 0 0% 40%; /* Dunkelgrau */
+      --chart-3: 0 0% 60%; /* Mittelgrau */
+      --chart-4: 0 0% 80%; /* Helles Grau */
+      --chart-5: 48 16% 95%; /* Sehr helles Grau */
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
